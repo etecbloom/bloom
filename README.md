@@ -6,7 +6,7 @@ A system to help those facing early motherhood. Our project promises to make thi
 
 ## Stack (Frameworks, Languages etc.) 👩‍💻
 
-**Front-end:** React - TypeScript, HTML, CSS
+**Front-end:** Angular, HTML, CSS
 
 **Back-end:** Java, Spring, Spring Boot 
 
