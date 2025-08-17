@@ -8,7 +8,7 @@ A system to help those facing early motherhood. Our project promises to make thi
 
 **Front-end:** Angular, HTML, CSS
 
-**Back-end:** Java, Spring, Spring Boot 
+**Back-end:** Python, FastAPI
 
 **Database:** PostgreSQL, Hibernate as ORM
 ## Features 🛠
