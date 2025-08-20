@@ -12,4 +12,4 @@ class User(Base):
     exp_level = Column(Enum(ExpLevelEnum), default=ExpLevelEnum.NOVICE)
     role = Column(Enum(RoleEnum), nullable=False)   
 
-    posts=relationship("Post", back_populates="owner")
+    posts = relationship("Post", back_populates="author")
