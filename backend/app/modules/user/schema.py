@@ -1,6 +1,6 @@
+from app.shared.utils import ExperienceLevel, Role
 from pydantic import BaseModel, EmailStr
 from datetime import datetime
-from app.shared.utils import ExperienceLevel, Role
 
 class BaseUserSchema(BaseModel):
     email: EmailStr
@@ -26,3 +26,11 @@ class ResponseUserSchema(BaseModel):
 
     class Config:
         from_attributes = True
+
+class UserPartialUpdateSchema(BaseModel):
+    email: EmailStr | None = None
+    username: str | None = None
+
+class UserLoginSchema(BaseModel):
+    username: str
+    password: str
