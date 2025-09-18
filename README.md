@@ -6,8 +6,7 @@ A system to help those facing early motherhood. Our project promises to make thi
 
 ## Stack (Frameworks, Languages etc.) 👩‍💻
 
-**Front-end:** Angular, HTML, CSS
-
+**Front-end:** VueJS, Vite
 **Back-end:** Python, FastAPI
 
 **Database:** PostgreSQL, Hibernate as ORM
