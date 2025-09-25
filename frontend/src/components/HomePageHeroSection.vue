@@ -1,7 +1,7 @@
 <template>
     <div class="hero-section">
         <h1>Conectando mães com suporte real desde o primeiro dia</h1>
-        <button class="cta-button">Descubra o Bloom hoje!</button>
+        <button class="cta-button" href="/details">Descubra o Bloom hoje!</button>
     </div>
 </template>
 

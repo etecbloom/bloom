@@ -4,7 +4,7 @@
       <img src="/logo_bloom.png" alt="Logo Bloom">
     </div>
     <ul :class="['navbar-links', { 'active': isMobileMenuOpen }]">
-      <li><a href="#">Apresentação</a></li>
+      <li><a href="/details">Apresentação</a></li>
       <li><a href="#">Contate-nos</a></li>
       <li><a href="#">Recursos</a></li>
     </ul>
