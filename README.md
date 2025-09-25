@@ -1,12 +1,11 @@
 ![Logo Bloom](frontend/public/logo_bloom.png)
-# Bloom 🌼
 
 A system to help those facing early motherhood. Our project promises to make this difficult period easier. 
 
-
 ## Stack (Frameworks, Languages etc.) 👩‍💻
 
-**Front-end:** VueJS, Vite 
+**Front-end:** VueJS, Vite
+
 **Back-end:** Python, FastAPI
 
 **Database:** PostgreSQL, Hibernate as ORM
