@@ -1,4 +1,4 @@
-
+https://github.com/etecbloom/bloom/frotend/public/logo_bloom.png
 # Bloom 🌼
 
 A system to help those facing early motherhood. Our project promises to make this difficult period easier. 
