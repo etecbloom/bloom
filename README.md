@@ -1,37 +1,5 @@
-![Logo Bloom](frontend/public/logo_bloom.png)
+# Vue 3 + Vite
 
-A system to help those facing early motherhood. Our project promises to make this difficult period easier. 
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## Stack (Frameworks, Languages etc.) 👩‍💻
-
-**Front-end:** VueJS, Vite
-
-**Back-end:** Python, FastAPI
-
-**Database:** PostgreSQL, Hibernate as ORM
-## Features 🛠
-
-- A chat to talk to professionals
-- Forum to discuss ideas and doubts
-- Some posts to get tips from
-- Only site
-
-
-## Support 📩
-
-For support, email: ltdabloom@gmail.com
-
-
-## Contributors 📞
-
-**Name:** Felipe Viegas Squarizzi
-
-**Contact:** 08squarizzifelipe@gmail.com
-
-**Name:** Nicollas Monteiro de Castro
-
-**Contact:** nicollasmonteiro.castro@gmail.com
-
-**Name:** Bárbara de Souza de Andrade
-
-**Contact:** barbara.andrade32@etec.sp.gov.br
+Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
