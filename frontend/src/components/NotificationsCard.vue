@@ -1,5 +1,5 @@
 <script setup>
-// State placeholder for data fetching
+
 </script>
 
 <template>

@@ -79,7 +79,7 @@
 }
 
 .logo-image {
-  height: 40px;
+  height: 20px;
 }
 
 .nav-links {
@@ -95,7 +95,6 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 700 !important;
   font-size: 18px;
-  /* Mobile size */
   transition: color 0.3s;
 }
 
@@ -117,5 +116,10 @@
   .nav-logo {
     padding-left: 20px;
   }
+
+  .logo-image {
+    height: 40px;
+  }
+
 }
 </style>

@@ -1,154 +1,213 @@
+<script setup>
+import Navbar from '../components/Navbar.vue';
+</script>
+
 <template>
-  <Navbar />
-  <div class="hero-container">
-    <HomePageHeroSection />
-    <PregnantMomImage />
-    <Shape :shapes="shapes"/>
-    <BackgroundFlowers :flowers="flowers" />
+  <div class="home-page">
+    <Navbar />
+    <main class="main-content">
+      <section class="hero-section">
+        <div class="hero-text">
+          <h1>Conectando mães com suporte real desde o primeiro dia</h1>
+          <div class="button-group">
+            <button class="cta-button" @click="$router.push('/details')">Descubra o Bloom hoje!</button>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img src="/mom.png" alt="Ilustração de uma mulher grávida com a mão na barriga" loading="lazy" />
+        </div>
+      </section>
+    </main>
+    <div class="background-shapes">
+      <img src="/shape.png" class="bg-shape">
+    </div>
   </div>
 </template>
 
-<script setup>
-import Navbar from '../components/Navbar.vue';
-import HomePageHeroSection from '../components/HomePageHeroSection.vue';
-import PregnantMomImage from '../components/PregnantMomImage.vue';
-
-import BackgroundFlowers from '../components/BackgroundFlowers.vue';
-
-const shapes = [
-  {
-    src: "/shape.png",
-    top: "27%",
-    right: "-5%",
-    bottom: "auto",
-    scale: 0.8,
-    rotate: 0,
-    opacity: 0.7
-  },
-]
-
-const flowers = [
-  {
-    src: '/GreenFlower.png',
-    top: '15%',
-    left: '25%',
-    scale: 0.8,
-    rotate: 15
-  },
-  {
-    src: '/PurpleFlower.png',
-    top: '8%',
-    left: '5%',
-    scale: 0.7,
-    rotate: -10
-  },
-  {
-    src: '/GreenFlower.png',
-    top: '50%',
-    left: '30%',
-    scale: 0.6,
-    rotate: 30
-  },
-  {
-    src: '/PurpleFlower.png',
-    top: '50%',
-    left: '48%',
-    scale: 0.4,
-    rotate: -20
-  },
-  {
-    src: '/PurpleFlower.png',
-    top: '10%',
-    right: '25%',
-    scale: 0.65,
-    rotate: 25
-  },
-  {
-    src: '/GreenFlower.png',
-    bottom: '20%',
-    right: '25%',
-    scale: 0.9,
-    rotate: -15
-  },
-  {
-    src: '/GreenFlower.png',
-    bottom: '5%',
-    left: '8%',
-    scale: 0.6,
-    rotate: -25
-  },
-  {
-    src: '/PurpleFlower.png',
-    bottom: '40%',
-    right: '50%',
-    scale: 0.7,
-    rotate: 5
-  },
-  {
-    src: '/PurpleFlower.png',
-    top: '70%',
-    left: '30%',
-    scale: 0.8,
-    rotate: 20
-  },
-  {
-    src: '/PurpleFlower.png',
-    top: '75%',
-    right: '30%',
-    scale: 0.5,
-    rotate: -30
-  }
-]
-</script>
-
 <style scoped>
-.hero-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 80vh;
-  height: auto;
-  padding: clamp(1rem, 3vw, 2rem) clamp(2rem, 6vw, 6rem);
-  box-sizing: border-box;
+.home-page {
   position: relative;
-  gap: clamp(1rem, 3vw, 2rem);
+  overflow-y: hidden;
 }
 
-@media (max-width: 1024px) {
-  .hero-container {
-    padding: 1.5rem 3rem;
-    gap: 1.5rem;
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  padding: 2 1.5rem 3rem;
+  text-align: center;
+  max-width: 350px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.hero-image {
+  order: 2;
+  display: block;
+  width: 100%;
+  z-index: 5;
+}
+
+.hero-image img {
+  width: 62%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-text {
+  order: 1;
+  padding-top: 1rem;
+  z-index: 6;
+  margin-bottom: 0;
+}
+
+.hero-text h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #3D3A3A;
+  margin-bottom: 1rem;
+}
+
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 300px;
+  z-index: 10;
+}
+
+.cta-button {
+  width: 100%;
+  max-width: 350px;
+  padding: 1rem 1.5rem;
+  font-size: 20px;
+  font-weight: semibold;
+  color: white;
+  background: linear-gradient(90deg, #957FEF 0%, #C09FCA 65%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Montserrat', sans-serif;
+
+  z-index: 10;
+  max-width: none;
+}
+
+.cta-button:hover {
+  transform: scale(0.98);
+}
+
+.background-shapes {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    max-width: 100%;
+    padding-top: 7rem;
+    padding-left: 10rem;
+    position: static;
   }
-}
 
-@media (max-width: 768px) {
-  .hero-container {
+  .hero-image {
+    display: block;
+    flex: 0 0 450px;
+    max-width: 450px;
+    order: 2;
+    margin-left: auto;
+    margin-bottom: 0;
+    z-index: 10;
+  }
+
+  .hero-text {
+    flex: 1;
+    max-width: 530px;
+    order: 1;
+    margin-top: 3rem;
+  }
+
+  .hero-text h1 {
+    font-size: 45px;
+    margin-bottom: 2rem;
+  }
+
+  .button-group {
+    width: auto;
+    height: auto;
     flex-direction: column;
-    padding: 1rem 1.5rem;
-    gap: 1rem;
-    min-height: auto;
-    text-align: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    z-index: auto;
   }
-}
 
-@media (max-width: 480px) {
-  .hero-container {
-    padding: 0.75rem 1rem;
-    gap: 0.75rem;
+  .cta-button {
+    padding: 1rem 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    width: auto;
+    max-width: none;
+    white-space: nowrap;
   }
-}
 
-@media (min-width: 1440px) {
-  .hero-container {
-    padding: 3rem 8rem;
-    min-height: 85vh;
+  .cta-button:hover {
+    transform: scale(0.98);
   }
-}
 
-@media (min-width: 1920px) {
-  .hero-container {
-    max-width: 1800px;
-    margin: 0 auto;
+  .hero-image {
+    display: block;
+    flex: 0 0 450px;
+    max-width: 450px;
+    order: 2;
+    margin-left: auto;
   }
+
+  .hero-image img {
+    width: 360px;
+    margin-left: 0;
+    display: block;
+  }
+
+  .background-shapes {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .bg-shape {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 740px;
+    max-width: 880px;
+    height: auto;
+  }
+
 }
 </style>

@@ -3,8 +3,6 @@
     <div class="logo">
       <img src="/logo_bloom.png" alt="Bloom" class="logo-image">
     </div>
-    <BackgroundFlowers :flowers="flowers"/>
-    <Shape :shapes="shapes"/>
     <SectionHeader 
       title="Tudo o que você precisa" 
       subtitle="em um só lugar!"
@@ -23,7 +21,6 @@
 import SectionHeader from '../components/SectionHeader.vue'
 import FeatureGrid from '../components/FeatureGrid.vue'
 import CallToAction from '../components/CallToAction.vue'
-import BackgroundFlowers from '../components/BackgroundFlowers.vue'
 
 const shapes = [
   {
