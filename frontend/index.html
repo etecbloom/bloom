@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html, body {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden; /* padrão: bloqueado */
+}
+
+/* Tablets e celulares grandes */
+@media (max-width: 1024px) {
+  html, body {
+    overflow-y: auto;
+  }
+}
+
+/* Celulares médios */
+@media (max-width: 768px) {
+  html, body {
+    overflow-y: auto;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 576px) {
+  html, body {
+    overflow-y: auto;
+  }
+}
+
+/* Muito pequenos (tipo iPhone SE) */
+@media (max-width: 375px) {
+  html, body {
+    overflow-y: auto;
+  }
+}
+
+  </style>
+  <title>Bloom</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
